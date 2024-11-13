@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscribed Emails</title>
+</head>
+<body>
+    <h2>Subscribed Emails</h2>
+    <div>
+        <?php 
+            if (file_exists('adminmail.html')) {
+                echo file_get_contents('adminmail.html'); 
+            } else {
+                echo "<p>No subscriptions yet.</p>";
+            }
+        ?>
+    </div>
+</body>
+</html>

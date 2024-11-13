@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Appointment Requests</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        .appointment-details {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .appointment {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .appointment p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <h2>Appointment Request Details</h2>
+    <div class="appointment-details" id="appointmentDetails">
+        <p>No appointment data available.</p>
+    </div>
+
+    <script>
+        // Retrieve the appointment data from local storage
+        const appointmentData = JSON.parse(localStorage.getItem('appointments')) || [];
+
+        // Display the appointment details if available
+        const detailsDiv = document.getElementById('appointmentDetails');
+        if (appointmentData.length > 0) {
+            detailsDiv.innerHTML = ''; // Clear the "no data" message
+            appointmentData.forEach(data => {
+                detailsDiv.innerHTML += `
+                    <div class="appointment">
+                        <p><strong>Name:</strong> ${data.name}</p>
+                        <p><strong>Email:</strong> ${data.email}</p>
+                        <p><strong>Phone:</strong> ${data.phone}</p>
+                        <p><strong>Message:</strong> ${data.message}</p>
+                    </div>
+                `;
+            });
+        }
+    </script>
+</body>
+</html>

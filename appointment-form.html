@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        .footer-form {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .input-field {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .btn:hover {
+            background-color: #218838;
+        }
+        .success-message {
+            text-align: center;
+            color: green;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h2>Appointment Request</h2>
+    <div class="success-message" id="successMessage">Form Submitted Successfully!</div>
+    <form id="appointmentForm" class="footer-form">
+        <input type="text" name="name" placeholder="Your Name" class="input-field" required>
+        <input type="email" name="email" placeholder="Your Email" class="input-field" required>
+        <input type="text" name="phone" placeholder="Your Phone Number" class="input-field" required>
+        <textarea name="message" placeholder="Additional Information" class="input-field" rows="4"></textarea>
+        <button type="submit" class="btn">Submit Appointment</button>
+    </form>
+
+    <script>
+        document.getElementById('appointmentForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+            
+            // Get form data
+            const formData = {
+                name: this.name.value,
+                email: this.email.value,
+                phone: this.phone.value,
+                message: this.message.value
+            };
+            
+            // Retrieve existing appointments from local storage
+            const existingAppointments = JSON.parse(localStorage.getItem('appointments')) || [];
+            // Add the new appointment to the existing ones
+            existingAppointments.push(formData);
+            // Store the updated appointments in local storage
+            localStorage.setItem('appointments', JSON.stringify(existingAppointments));
+
+            // Show success message
+            document.getElementById('successMessage').style.display = 'block';
+
+            // Redirect to admin.html after a short delay
+            
+        });
+    </script>
+</body>
+</html>

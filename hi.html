@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 
+    - primary meta tags
+  -->
+  <title>Doclab - home</title>
+  <meta name="title" content="Doclab - home">
+  <meta name="description" content="This is a medical html template made by priya">
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Rubik:wght@400;500;700&display=swap"
+    rel="stylesheet">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="hi.css">
+
+  <!-- 
+    - preload images
+  -->
+  <link rel="preload" as="image" href="./assets/images/hero-banner.png">
+  <link rel="preload" as="image" href="./assets/images/hero-bg.png">
+
+</head>
+
+<body id="top">
+
+  <!-- 
+    - #PRELOADER
+  -->
+
+  <div class="preloader" data-preloader>
+    <div class="circle"></div>
+  </div>
+
+
+
+
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header active" data-header>
+    <div class="container">
+
+      <a href="#top" class="logo">
+        <img src="img1.png" width="136" height="46" alt="Doclab home">
+      </a>
+
+      <nav class="navbar" data-navbar>
+
+        <div class="navbar-top">
+
+          <a href="#" class="logo">
+            <img src="img1.png" width="136" height="46" alt="Doclab home">
+          </a>
+
+          <button class="nav-close-btn" aria-label="clsoe menu" data-nav-toggler>
+            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+          </button>
+
+        </div>
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <a href="#top" style="color: white;" class="navbar-link title-md">Home</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#service" style="color: white;" class="navbar-link title-md">Doctors</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#listing" style="color: white;" class="navbar-link title-md">Services</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#blog" style="color: white;" class="navbar-link title-md">Blog</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#footer" style="color: white;" class="navbar-link title-md">Contact</a>
+          </li>
+
+        </ul>
+
+        <ul class="social-list">
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-pinterest"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-youtube"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+        <ion-icon name="menu-outline"></ion-icon>
+      </button>
+
+      <a href="appointment-form.html" class="btn has-before title-md">Make Appointment</a>
+
+      <div class="overlay active" data-nav-toggler data-overlay></div>
+
+    </div>
+  </header>
+
+
+
+
+
+  <main>
+    <article>
+
+      <!-- 
+        - #HERO
+      -->
+
+      <section class="section hero" style="background-image: url('hero-bg.png')" aria-label="home">
+        <div class="container">
+
+          <div class="hero-content">
+
+            <p class="hero-subtitle has-before" data-reveal="left" style="font-size: 46px;">Welcome To Doclab</p>
+
+
+
+            <h1 class="headline-lg hero-title" style="color: white;"  data-reveal="left">
+              Find Nearest <br>
+              Doctor.
+            </h1>
+
+            <div class="hero-card" data-reveal="left">
+
+              <p class="title-lg card-text">
+                Search doctors. clinics. hospitals. etc.
+              </p>
+
+              <div class="wrapper">
+                <div class="input-wrapper title-lg">
+                    <input type="text" id="location" name="location" placeholder="Locations" class="input-field">
+                    <ion-icon name="location"></ion-icon>
+                </div>
+                <button class="btn has-before" onclick="findNearbyPlaces()">
+                    <ion-icon name="search"></ion-icon>
+                    <span class="span title-md">Find Now</span>
+                </button>
+            </div>
+            
+
+            </div>
+
+          </div>
+
+          <figure class="hero-banner" data-reveal="right">
+            <img src="aa.1.png" width="590" height="517" loading="eager" alt="hero banner"
+              class="w-100">
+          </figure>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #SERVICE
+      -->
+
+      <section class="service" id="service" aria-label="service">
+        <div class="container">
+            <ul class="service-list">
+                <li>
+                    <div class="service-card" data-reveal="bottom">
+                        <div class="card-icon">
+                            <img src="aa.1.png" width="71" height="71" loading="lazy" alt="icon">
+                        </div>
+                        <h3 class="headline-sm card-title">
+                            <a href="#">Psychiatry</a>
+                        </h3>
+                        <p class="card-text">
+                            Physical medicine and rehabilitation
+                        </p>
+                        <button class="btn-circle" aria-label="read more about psychiatry" onclick="showInfo('Psychiatry')">
+                            <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+                        </button>
+                    </div>
+                </li>
+                <li>
+                    <div class="service-card" data-reveal="bottom">
+                        <div class="card-icon">
+                            <img src="aa.2.png" width="71" height="71" loading="lazy" alt="icon">
+                        </div>
+                        <h3 class="headline-sm card-title">
+                            <a href="#">Gynecology</a>
+                        </h3>
+                        <p class="card-text">
+                            Treatment of Women diseases
+                        </p>
+                        <button class="btn-circle" aria-label="read more about Gynecology" onclick="showInfo('Gynecology')">
+                            <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+                        </button>
+                    </div>
+                </li>
+                <li>
+                    <div class="service-card" data-reveal="bottom">
+                        <div class="card-icon">
+                            <img src="aa.3.png" width="71" height="71" loading="lazy" alt="icon">
+                        </div>
+                        <h3 class="headline-sm card-title">
+                            <a href="#">Pulmonology</a>
+                        </h3>
+                        <p class="card-text">
+                            Diseases and Conditions of the chest
+                        </p>
+                        <button class="btn-circle" aria-label="read more about Pulmonology" onclick="showInfo('Pulmonology')">
+                            <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+                        </button>
+                    </div>
+                </li>
+                <li>
+                    <div class="service-card" data-reveal="bottom">
+                        <div class="card-icon">
+                            <img src="aa.4.png" width="71" height="71" loading="lazy" alt="icon">
+                        </div>
+                        <h3 class="headline-sm card-title">
+                            <a href="#">Orthopedics</a>
+                        </h3>
+                        <p class="card-text">
+                            Condition involving musculoskeletal system
+                        </p>
+                        <button class="btn-circle" aria-label="read more about Orthopedics" onclick="showInfo('Orthopedics')">
+                            <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+                        </button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+    
+    <!-- Modal for displaying doctors and hospitals -->
+    <div id="infoModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modalTitle"></h2>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+      <!-- 
+        - #ABOUT
+      -->
+
+      <section class="section about" aria-labelledby="about-label">
+        <div class="container">
+            <div class="about-content">
+                <p class="section-subtitle title-lg has-after" id="about-label" data-reveal="left">About Us</p>
+                <h2 class="headline-md" data-reveal="left">Experienced Workers</h2>
+                <p class="section-text" data-reveal="left">Services Available 24/7</p>
+
+                <ul class="tab-list" data-reveal="left">
+                    <li><button class="tab-btn active" data-info="vision">Vision</button></li>
+                    <li><button class="tab-btn" data-info="mission">Mission</button></li>
+                    <li><button class="tab-btn" data-info="strategy">Strategy</button></li>
+                </ul>
+
+                <p class="tab-text" data-reveal="left">Our vision is to connect patients with the nearest doctors using technology and healthcare services.</p>
+
+                <div class="wrapper">
+                    <ul class="about-list">
+                        <li class="about-item" data-reveal="left">
+                            <a href="health.html" class="info-btn">
+                                <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                <span class="span">Health</span>
+                            </a>
+                        </li>
+                        <li class="about-item" data-reveal="left">
+                            <a href="medicines.html" class="info-btn">
+                                <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                <span class="span">Medicines</span>
+                            </a>
+                        </li>
+                        <li class="about-item" data-reveal="left">
+                            <a href="treatment.html" class="info-btn">
+                                <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                <span class="span">Treatment</span>
+                            </a>
+                        </li>
+                        <li class="about-item" data-reveal="left">
+                            <a href="reports.html" class="info-btn">
+                                <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                <span class="span">Patient Reports</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <figure class="about-banner" data-reveal="right">
+                <img src="img1.png" width="554" height="678" loading="lazy" alt="about banner" class="w-100">
+            </figure>
+        </div>
+    </section>
+
+
+
+
+
+      <!-- 
+        - #LISTING
+      -->
+
+      <section class="section listing" id="listing" aria-labelledby="listing-label">
+        <div class="container">
+            <ul class="grid-list">
+               <!-- Psychiatry listing card -->
+                
+            <li>
+              <div class="listing-card">
+                  <div class="card-icon">
+                      <img src="icon-1.png" width="71" height="71" loading="lazy" alt="Psychiatry Icon">
+                  </div>
+                  <h3 class="headline-sm card-title">Psychiatry</h3>
+                  <button class="btn-search" onclick="promptLocation('Psychiatry')">Find Nearby Psychiatrists</button>
+              </div>
+          </li>
+            
+
+      <!-- Gynecology Listing Card -->
+      <li>
+          <div class="listing-card">
+              <div class="card-icon">
+                  <img src="icon-2.png" width="71" height="71" loading="lazy" alt="Gynecology Icon">
+              </div>
+              <h3 class="headline-sm card-title">Gynecology</h3>
+              <button class="btn-search" onclick="promptLocation('Gynecology')">Find Nearby Gynecologists</button>
+          </div>
+      </li>
+
+      <!-- Pulmonology Listing Card -->
+      <li>
+          <div class="listing-card">
+              <div class="card-icon">
+                  <img src="icon-4.png" width="71" height="71" loading="lazy" alt="Pulmonology Icon">
+              </div>
+              <h3 class="headline-sm card-title">Pulmonology</h3>
+              <button class="btn-search" onclick="promptLocation('Pulmonology')">Find Nearby Pulmonologists</button>
+          </div>
+      </li>
+
+      <!-- Orthopedics Listing Card -->
+      <li>
+          <div class="listing-card">
+              <div class="card-icon">
+                  <img src="icon-5.png" width="71" height="71" loading="lazy" alt="Orthopedics Icon">
+              </div>
+              <h3 class="headline-sm card-title">Orthopedics</h3>
+              <button class="btn-search" onclick="promptLocation('Orthopedics')">Find Nearby Orthopedists</button>
+          </div>
+      </li>
+
+      <!-- Pediatrics Listing Card -->
+      <li>
+          <div class="listing-card">
+              <div class="card-icon">
+                  <img src="icon-6.png" width="71" height="71" loading="lazy" alt="Pediatrics Icon">
+              </div>
+              <h3 class="headline-sm card-title">Pediatrics</h3>
+              <button class="btn-search" onclick="promptLocation('Pediatrics')">Find Nearby Pediatricians</button>
+          </div>
+      </li>
+
+      <!-- Osteology Listing Card -->
+      <li>
+          <div class="listing-card">
+              <div class="card-icon">
+                  <img src="icon-7.png" width="71" height="71" loading="lazy" alt="Osteology Icon">
+              </div>
+              <h3 class="headline-sm card-title">Osteology</h3>
+              <button class="btn-search" onclick="promptLocation('Osteology')">Find Nearby Osteologists</button>
+          </div>
+      </li>
+  </ul>
+
+  <script>
+      function promptLocation(specialty) {
+          const location = prompt("Enter your city or area:");
+          if (location) {
+              window.location.href = `results.html?city=${encodeURIComponent(location)}&specialty=${encodeURIComponent(specialty)}`;
+          }
+      }
+  </script>
+    
+
+      <!-- 
+        - #BLOG
+      -->
+
+      <section class="section blog" id="blog" aria-labelledby="blog-label">
+        <div class="container">
+
+          <p class="section-subtitle title-lg text-center" id="blog-label" data-reveal="bottom">
+            News & Article
+          </p>
+
+          <h2 class="section-title headline-md text-center" data-reveal="bottom">Latest Articles</h2>
+
+          <ul class="grid-list">
+
+            <li>
+              <div class="blog-card has-before has-after" data-reveal="bottom">
+
+                <div class="meta-wrapper">
+
+                  <div class="card-meta">
+                    <ion-icon name="person-outline"></ion-icon>
+
+                    <span class="span">By Admin</span>
+                  </div>
+
+                  <div class="card-meta">
+                    <ion-icon name="folder-outline"></ion-icon>
+
+                    <span class="span">Specialist</span>
+                  </div>
+
+                </div>
+
+                <h3 class="headline-sm card-title">Could intermittent fasting reduce breast cancer</h3>
+
+                <time class="title-sm date" datetime="2022-01-28">05 September, 2024</time>
+
+                <p class="card-text">
+                  
+                </p>
+
+                <a href="article1.html" class="btn-text title-lg">Read More</a>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="blog-card has-before has-after" data-reveal="bottom">
+
+                <div class="meta-wrapper">
+
+                  <div class="card-meta">
+                    <ion-icon name="person-outline"></ion-icon>
+
+                    <span class="span">By Admin</span>
+                  </div>
+
+                  <div class="card-meta">
+                    <ion-icon name="folder-outline"></ion-icon>
+
+                    <span class="span">Specialist</span>
+                  </div>
+
+                </div>
+
+                <h3 class="headline-sm card-title">Give children more autonomy during the pandemic</h3>
+
+                <time class="title-sm date" datetime="2022-01-28">05 September, 2024</time>
+
+                <p class="card-text">
+                  
+                </p>
+
+                <a href="article2.html" class="btn-text title-lg">Read More</a>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="blog-card has-before has-after" data-reveal="bottom">
+
+                <div class="meta-wrapper">
+
+                  <div class="card-meta">
+                    <ion-icon name="person-outline"></ion-icon>
+
+                    <span class="span">By Admin</span>
+                  </div>
+
+                  <div class="card-meta">
+                    <ion-icon name="folder-outline"></ion-icon>
+
+                    <span class="span">Specialist</span>
+                  </div>
+
+                </div>
+
+                <h3 class="headline-sm card-title">How do binge eating and drinking impact the liver?</h3>
+
+                <time class="title-sm date" datetime="2022-01-28">05 September, 2024</time>
+
+                <p class="card-text">
+                  
+                </p>
+
+                <a href="article3.html" class="btn-text title-lg">Read More</a>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+
+
+
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer" id="footer" style="background-image: url('img5.png')"></footer>
+    <div class="container">
+
+      <div class="section footer-top">
+
+        <div class="footer-brand" data-reveal="bottom">
+
+          <a href="#" class="logo">
+            <img src="img3.png" width="136" height="46" loading="lazy" alt="Doclab home">
+          </a>
+
+          <ul class="contact-list has-after">
+
+            <li class="contact-item">
+
+              <div class="item-icon">
+                <ion-icon name="mail-open-outline"></ion-icon>
+              </div>
+
+              <div>
+                <p>
+                  Main Email : <a href="mailto:lakshmipriyacse30@gmail.com" class="contact-link">contact@.com</a>
+                </p>
+
+                <p>
+                  Inquiries : <a href="mailto:Info@mail.com" class="contact-link">Info@mail.com</a>
+                </p>
+              </div>
+
+            </li>
+
+            <li class="contact-item">
+
+              <div class="item-icon">
+                <ion-icon name="call-outline"></ion-icon>
+              </div>
+
+              <div>
+                <p>
+                  Office Telephone : <a href="tel:0029129102320" class="contact-link">9876543210</a>
+                </p>
+
+                <p>
+                  Mobile : <a href="tel:000232439493" class="contact-link">987 654 3210</a>
+                </p>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </div>
+
+        <div class="footer-list" data-reveal="bottom">
+
+          <p class="headline-sm footer-list-title">About Us</p>
+
+          <p class="text">
+
+          </p>
+
+          <address class="address">
+            <ion-icon name="map-outline"></ion-icon>
+
+            <span class="text">
+              Tamilnadu <br>
+              600001
+            </span>
+          </address>
+
+        </div>
+
+        <ul class="footer-list" data-reveal="bottom">
+
+          <li>
+            <p class="headline-sm footer-list-title">Services</p>
+          </li>
+
+          <li>
+            <a href="#" class="text footer-link">Conditions</a>
+          </li>
+
+          <li>
+            <a href="#" class="text footer-link">Listing</a>
+          </li>
+
+          <li>
+            <a href="#" class="text footer-link">How It Works</a>
+          </li>
+
+          <li>
+            <a href="#" class="text footer-link">What We Offer</a>
+          </li>
+
+          <li>
+            <a href="#" class="text footer-link">Latest News</a>
+          </li>
+
+          <li>
+            <a href="#" class="text footer-link">Contact Us</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list" data-reveal="bottom">
+
+          <li>
+            <p class="headline-sm footer-list-title">Useful Links</p>
+          </li>
+
+          <li>
+            <a href="#" class="text footer-link">Conditions</a>
+          </li>
+
+          <li>
+            <a href="#" class="text footer-link">Terms of Use</a>
+          </li>
+
+          <li>
+            <a href="#" class="text footer-link">Our Services</a>
+          </li>
+
+          <li>
+            <a href="#" class="text footer-link">Join as a Doctor</a>
+          </li>
+
+          <li>
+            <a href="#" class="text footer-link">New Guests List</a>
+          </li>
+
+          <li>
+            <a href="#" class="text footer-link">The Team List</a>
+          </li>
+
+        </ul>
+
+        <div class="footer-list" data-reveal="bottom">
+
+          <p class="headline-sm footer-list-title">Subscribe</p>
+    <form id="subscribeForm" action="subscribe.php" method="POST">
+        <input type="email" name="email" placeholder="Email" class="input-field title-lg" required>
+        <button type="submit" class="btn has-before title-md">Subscribe</button>
+    </form>
+    
+    <p id="subscribeMessage" style="display: none; color: green;">Subscribed successfully!</p> <!-- Success message -->
+
+    <script>
+        // Prevent form submission and use AJAX to submit without reloading
+        document.getElementById('subscribeForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form reload
+            
+            const formData = new FormData(this);
+            
+            fetch('subscribe.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.text())
+            .then(data => {
+                // Display success message
+                document.getElementById('subscribeMessage').style.display = 'block';
+
+                // Optionally clear the form
+                this.reset();
+            })
+            .catch(error => console.error('Error:', error));
+        });
+    </script>
+
+
+
+
+
+          <p class="text">
+            Get the latest updates via email. Any time you may unsubscribe
+          </p>
+
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+
+        <p class="text copyright">
+          &copy; Doclab 2024 | All Rights Reserved by PriyaThanusha
+        </p>
+
+        <ul class="social-list">
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-google"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-pinterest"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+  </footer>
+
+
+
+
+
+  <!-- 
+    - #BACK TO TOP
+  -->
+
+  <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
+    <ion-icon name="chevron-up"></ion-icon>
+  </a>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="script.js"></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  
+
+</body>
+
+</html>
